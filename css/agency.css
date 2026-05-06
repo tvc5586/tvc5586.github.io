@@ -33,6 +33,9 @@ a:focus,
 a:active,
 a.active {
     outline: 0;
+    border-color: transparent;
+    color: #000;
+    background-color: #fff;
 }
 
 a {
