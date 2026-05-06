@@ -31,6 +31,8 @@ a,
 a:hover,
 a:focus,
 a:active,
+a:link,
+a:visited,
 a.active {
     outline: 0;
 }
@@ -42,6 +44,18 @@ a {
 a:hover,
 a:focus,
 a:active,
+a:link,
+a:visited,
+a.active {
+    outline: 0;
+}
+
+a {
+    color: #fed136;
+}
+
+a:hover,
+a:focus,
 a.active {
     outline: 0;
 }
@@ -119,7 +133,8 @@ fieldset[disabled] .btn-primary.active {
     background-color: transparent;
 }
 
-.btn-xl {
+.btn-xl,
+.btn-xl:focus {
     padding: 20px 40px;
     border-color: #fff;
     border-radius: 3px;
@@ -132,7 +147,6 @@ fieldset[disabled] .btn-primary.active {
 }
 
 .btn-xl:hover,
-.btn-xl:focus,
 .btn-xl:active,
 .btn-xl.active,
 .open .dropdown-toggle.btn-xl {
@@ -176,17 +190,19 @@ fieldset[disabled] .btn-xl.active {
     background-color: #05042e;
 }
 
-.navbar-default .navbar-brand {
+.navbar-default .navbar-brand,
+.navbar-default .navbar-brand:focus {
     text-transform: uppercase;
     font-family: Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;
     color: #fff;
 }
 
 .navbar-default .navbar-brand:hover,
-.navbar-default .navbar-brand:focus,
 .navbar-default .navbar-brand:active,
 .navbar-default .navbar-brand.active {
-    color: #fff;
+    border-color: transparent;
+    color: #000;
+    background-color: #fff;
 }
 
 .navbar-default .navbar-collapse {
@@ -207,7 +223,8 @@ fieldset[disabled] .btn-xl.active {
     background-color: transparent;
 }
 
-.navbar-default .nav li a {
+.navbar-default .nav li a,
+.navbar-default .nav li a:focus {
     text-transform: uppercase;
     font-family: Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;
     font-weight: 400;
@@ -215,22 +232,26 @@ fieldset[disabled] .btn-xl.active {
     color: #fff;
 }
 
-.navbar-default .nav li a:hover,
-.navbar-default .nav li a:focus {
+.navbar-default .nav li a:hover {
     outline: 0;
-    color: #fff;
+    border-color: transparent;
+    color: #000;
+    background-color: #fff;
 }
 
-.navbar-default .navbar-nav>.active>a {
-    border-radius: 0;
-    color: #fff;
-    background-color: transparent;
-}
-
-.navbar-default .navbar-nav>.active>a:hover,
+.navbar-default .navbar-nav>.active>a,
 .navbar-default .navbar-nav>.active>a:focus {
-    color: #fff;
-    background-color: transparent;
+    border-radius: 0;
+    outline: 0;
+    border-color: transparent;
+    color: #000;
+    background-color: #fff;
+}
+
+.navbar-default .navbar-nav>.active>a:hover {
+    border-color: transparent;
+    color: #000;
+    background-color: #fff;
 }
 
 @media(min-width:768px) {
@@ -543,12 +564,16 @@ section h3.section-subheading {
     text-transform: none;
 }
 
-.timeline .timeline-heading a {
+.timeline .timeline-heading a,
+.timeline .timeline-heading a:focus,
+.timeline .timeline-heading a:link {
     color: #fff;
     text-decoration: underline;
 }
 
-.timeline .timeline-heading a:hover, a:focus, a:active, a.active {
+.timeline .timeline-heading a:hover,
+.timeline .timeline-heading a:active,
+.timeline .timeline-heading a.active {
     border-color: transparent;
     color: #000;
     background-color: #fff;
@@ -762,7 +787,8 @@ ul.social-buttons {
     margin-bottom: 0;
 }
 
-ul.social-buttons li a {
+ul.social-buttons li a,
+ul.social-buttons li a:focus {
     display: block;
     width: 40px;
     height: 40px;
@@ -778,7 +804,6 @@ ul.social-buttons li a {
 }
 
 ul.social-buttons li a:hover,
-ul.social-buttons li a:focus,
 ul.social-buttons li a:active {
     border-color: transparent;
     color: #000;
@@ -866,7 +891,7 @@ ul.social-buttons li a:active {
 .project-modal .modal-backdrop {
     display: none;
     opacity: 0;
-}}
+}
 
 ::-moz-selection {
     text-shadow: none;
@@ -875,7 +900,9 @@ ul.social-buttons li a:active {
 
 ::selection {
     text-shadow: none;
-    background: #007acc;
+    border-color: transparent;
+    color: #000;
+    background-color: #fff;
 }
 
 img::selection {
